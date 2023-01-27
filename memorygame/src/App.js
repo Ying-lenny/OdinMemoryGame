@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import CardContainer from "./Components/CardContainer";
+import './App.css';
 
-const App = () => {
+function App() {
   const [colour, setColour] = useState('black');
 
   const changeColourClick = () => {
@@ -12,10 +14,6 @@ const App = () => {
   };
 
   const [count, setCount] = useState(0);
-
-  useEffect(() => {    
-    document.title = `You clicked ${count} times`;  
-  });
 
   useEffect(() => {
     console.log("Hi")
@@ -51,6 +49,9 @@ const App = () => {
         }}
       >
         This div can change color. Click on me!
+      </div>
+      <div className="card-container">
+        <CardContainer/>
       </div>
     </div>
   );
