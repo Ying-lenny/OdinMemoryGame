@@ -2,16 +2,21 @@ import React from "react";
 
 function Card(props) {
     const {
-        card: { id, title },
+        card: { src, id, title },
     } = props;
 
     const cardStyle = {
         
     };
     return (
-        <div className="card">
+        <button id={id} className="card">
+        <figure>
+            <img src={src} alt={title}/>
+        </figure>
+        <figcaption>
             {title}
-      </div>
+        </figcaption>
+      </button>
     )
 }
 
