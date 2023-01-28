@@ -1,65 +1,88 @@
-import image from '../src/Images/ContactAppIcon.png';
+import Asura from '../src/Images/Asura.jpg';
+import CAT from '../src/Images/CAT.jpg';
+import Crybaby from '../src/Images/Crybaby.jpg';
+import DS from '../src/Images/DS.jpg';
+import FilmRed from '../src/Images/FilmRed.jpg';
+import FTL from '../src/Images/FTL.jpg';
+import GodHand from '../src/Images/GodHand.jpg';
+import HnK from '../src/Images/HnK.jpg';
+import NecroDancer from '../src/Images/NecroDancer.jpg';
+import Nier from '../src/Images/Nier.jpg';
+import Portal from '../src/Images/Portal.png';
+import ROR2 from '../src/Images/ROR2.jpg';
 
 let images = [
         {
-            src: image,
+            src: Asura,
             id: 0,
-            title: 'One',
+            title: "Asura's Wrath",
+            colour: '#FF619B',
         }, 
         {
-            src: image,
+            src: CAT,
             id: 1,
-            title: 'Two',
+            title: 'Carol & Tuesday',
+            colour: '#E858D5',
         }, 
         {
-            src: image,
+            src: Crybaby,
             id: 2,
-            title: 'Three',
+            title: 'Devilman Crybaby',
+            colour: '#E36EFF',
         }, 
         {
-            src: image,
+            src: DS,
             id: 3,
-            title: 'Four',
+            title: 'Death Stranding',
+            colour: '#FF619B',
         }, 
         {
-            src: image,
+            src: FilmRed,
             id: 4,
-            title: 'Five',
+            title: 'One Piece: Film Red',
+            colour: '#FF5D38',
         }, 
         {
-            src: image,
+            src: FTL,
             id: 5,
-            title: 'Six',
+            title: 'Faster than Light',
+            colour: '#E86F33',
         }, 
         {
-            src: image,
+            src: GodHand,
             id: 6,
-            title: 'Seven',
+            title: 'God Hand',
+            colour: '#FF912B',
         }, 
         {
-            src: image,
+            src: HnK,
             id: 7,
-            title: 'Eight',
+            title: 'Houseki no Kuni',
+            colour: '#E8A333',
         }, 
         {
-            src: image,
+            src: NecroDancer,
             id: 8,
-            title: 'Nine',
+            title: 'NecroDancer',
+            colour: '#3DFF69',
         }, 
         {
-            src: image,
+            src: Nier,
             id: 9,
-            title: 'Ten',
+            title: 'Nier Automata',
+            colour: '#38E892',
         }, 
         {
-            src: image,
+            src: Portal,
             id: 10,
-            title: 'Eleven',
+            title: 'Portal',
+            colour: '#3DEFFF',
         }, 
         {
-            src: image,
+            src: ROR2,
             id: 11,
-            title: 'Twelve',
+            title: 'Risk of Rain 2',
+            colour: '#49FFDA',
         }, 
     ]
 
