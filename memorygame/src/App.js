@@ -1,57 +1,49 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import CardContainer from "./Components/CardContainer";
+import Header from "./Components/Header";
 import './App.css';
 
 function App() {
-  const [colour, setColour] = useState('black');
+  const [score, setScore] = useState(0);
+  const [highScore, setHighScore] = useState(0);
+  const [cardsArray, addCard] = useState([]);
 
-  const changeColourClick = () => {
-    if (colour === 'black') {
-      setColour('red');
+  const handleScore = () => {
+    setScore((prevScore) => prevScore + 1)
+  }
+
+  const handleHighScore = () => {
+    setHighScore(score);
+  }
+
+  const handleCard = (cardId) => {
+    addCard((prevArray) => [...prevArray, cardId]);
+  };
+
+  const reset = () => {
+    setScore(0);
+    addCard([]);
+  }
+
+  const handleGameLogic = (cardId) => {
+    if (!cardsArray.includes(cardId)) {
+      handleCard(cardId);
+      handleScore();
     } else {
-      setColour('black')
+      handleHighScore();
+      reset()
     }
   };
 
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    console.log("Hi")
-  }, [colour]);
-
   return (
     <div>
-      <div
-        id="myDiv1"
-        onClick={changeColourClick}
-        style={{
-          color: "white",
-          width: "100px",
-          height: "100px",
-          left: "50%",
-          top: "50%",
-          backgroundColor: colour,
-        }}
-      >
-        This div can change color. Click on me!
-      </div>
-      <p>You clicked {count} times</p>
-      <div
-        id="myDiv2"
-        onClick={() => setCount(count + 1)}
-        style={{
-          color: "white",
-          width: "100px",
-          height: "100px",
-          left: "50%",
-          top: "50%",
-          backgroundColor: colour,
-        }}
-      >
-        This div can change color. Click on me!
-      </div>
+      <Header score={score} highScore={highScore} />
       <div className="card-container">
-        <CardContainer/>
+        <CardContainer
+          handleGameLogic={handleGameLogic}
+          score={score}
+          highScore={highScore}
+        />
       </div>
     </div>
   );
